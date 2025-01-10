@@ -1,4 +1,4 @@
-```# Hierarchical-Bayesian-Models-for-U.S.-COVID-19-Spread
+# Hierarchical-Bayesian-Models-for-U.S.-COVID-19-Spread
 
 ![스크린샷 2025-01-11 06-02-33](https://github.com/user-attachments/assets/1136b5f2-39cb-4e77-9465-837533a818d4)
 
