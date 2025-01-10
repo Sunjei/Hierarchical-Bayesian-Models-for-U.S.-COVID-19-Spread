@@ -1,24 +1,18 @@
-# Hierarchical-Bayesian-Models-for-U.S.-COVID-19-Spread
+```# Hierarchical-Bayesian-Models-for-U.S.-COVID-19-Spread
 
-![스크린샷 2025-01-11 05-46-24](https://github.com/user-attachments/assets/b3427a66-fc2d-479d-b613-46a521ead332)
+![스크린샷 2025-01-11 06-02-33](https://github.com/user-attachments/assets/1136b5f2-39cb-4e77-9465-837533a818d4)
 
-![스크린샷 2025-01-11 05-46-57](https://github.com/user-attachments/assets/b6ed30a8-3293-4b18-96d3-d2ff356afa05)
+![스크린샷 2025-01-11 06-03-08](https://github.com/user-attachments/assets/7552523b-7bfa-4a47-899c-edaf08f24dba)
 
-![스크린샷 2025-01-11 05-47-02](https://github.com/user-attachments/assets/60f52a7f-263c-49fa-a059-1b884be45119)
+![스크린샷 2025-01-11 06-03-15](https://github.com/user-attachments/assets/10880060-c936-4f0f-80ab-82f1fd419269)
 
-![스크린샷 2025-01-11 05-47-39](https://github.com/user-attachments/assets/65a721f3-b62f-442d-910e-1b65120465c1)
+![스크린샷 2025-01-11 06-03-36](https://github.com/user-attachments/assets/4f6017c4-bb01-4ee6-83c7-52d1566815e1)
 
+![스크린샷 2025-01-11 06-03-42](https://github.com/user-attachments/assets/e1d7cc02-67f0-475f-b9bc-581deed5d9ed)
 
+![스크린샷 2025-01-11 06-04-06](https://github.com/user-attachments/assets/504a4ea5-6218-4e86-849a-525e513b999e)
 
-![스크린샷 2025-01-11 05-47-53](https://github.com/user-attachments/assets/96543480-b84a-4b88-80fc-389cf9054d9e)
+![스크린샷 2025-01-11 06-04-12](https://github.com/user-attachments/assets/feb830c8-60f4-4d73-8e9d-60e3978d59ca)
 
+![스크린샷 2025-01-11 06-04-33](https://github.com/user-attachments/assets/d02d73be-0917-4954-9f5d-3ec26238fd2c)
 
-![스크린샷 2025-01-11 05-48-43](https://github.com/user-attachments/assets/0e17a76e-b8ac-446a-a204-edf4f9716603)
-
-![스크린샷 2025-01-11 05-47-45](https://github.com/user-attachments/assets/1675b997-e1c1-417a-b2e7-0c0cc1ae6515)
-
-![스크린샷 2025-01-11 05-48-16](https://github.com/user-attachments/assets/16ec148f-3ebe-46f4-bb6e-b3f684857df9)
-
-![스크린샷 2025-01-11 05-49-02](https://github.com/user-attachments/assets/88fc59c6-019f-43e3-8e6a-63fcd9ed2b52)
-
-![스크린샷 2025-01-11 05-50-37](https://github.com/user-attachments/assets/c7b0b890-f42d-40d5-b8d6-7171c5c4230d)
