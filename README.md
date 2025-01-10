@@ -18,4 +18,4 @@
 
 ![스크린샷 2025-01-11 06-08-14](https://github.com/user-attachments/assets/2602bbf6-c213-44ce-a4b7-bdcd12860da8)
 
-![스크린샷 2025-01-11 05-50-37](https://github.com/user-attachments/assets/17b3eaca-0308-4d38-acc0-e366381cdddb)
+![스크린샷 2025-01-11 06-10-34](https://github.com/user-attachments/assets/b1b5e933-4761-4c65-a27d-11151f6a8040)
