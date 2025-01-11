@@ -62,7 +62,7 @@ ggplot(data_table, aes(x = state_abb, y = predicted_median, fill = state_abb)) +
 
 ![스크린샷 2025-01-11 06-07-57](https://github.com/user-attachments/assets/9bba9409-4ac9-4d09-a8fb-fcd3a2ede352)
 
-
+State-based Analysis
 ```
 
 random_effects <- ranef(model_updated)$state_abb
