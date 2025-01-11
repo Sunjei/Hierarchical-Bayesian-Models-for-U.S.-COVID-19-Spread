@@ -2,11 +2,9 @@
 
 
 
-![스크린샷 2025-01-11 06-07-26](https://github.com/user-attachments/assets/d9f3f7d3-a973-4325-9124-71e824b8168e)
-
-'''
+```
 cat("Adjusted R-squared: ", summary(gam_model)$r.sq, "\n")
-'''
+```
 
 ![스크린샷 2025-01-11 06-07-42](https://github.com/user-attachments/assets/438f26d0-a72e-47fa-93e8-ac8ee16b01c5)
 
