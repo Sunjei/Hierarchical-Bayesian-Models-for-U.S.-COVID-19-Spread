@@ -4,19 +4,25 @@
 
 ```
 install.packages("ggplot2")  
-library(ggplot2)
-set.seed(123)  
-data <- data.frame(
-  response = rnorm(100),  
-  state_abb = rep(c("CA", "TX", "NY", "FL", "OH"), 20)  
-)
+library(lme4)
 
-model <- lmer(response ~ 1 + (1 | state_abb), data = data)
-summary(model)
-data$predicted <- predict(model)
-ggplot(data, aes(x = state_abb, y = predicted)) +
-  geom_boxplot() +
-  labs(title = "Predicted Values by State", x = "State", y = "Predicted Response")
+model <- lmer(median ~ lower + upper + (1 | state_abb), data = data,
+              control = lmerControl(optCtrl = list(maxfun = 10000)))
+
+predictions <- predict(model, newdata = data, re.form = NULL)  # 새 데이터에 대한 예측
+
+data$predicted_median <- predictions
+
+head(data)
+
+library(ggplot2)
+
+ggplot(data, aes(x = median, y = predicted_median)) +
+  geom_point(color = "blue") + 
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "red") +
+  theme_minimal() +
+  labs(title = "Predicted vs Actual Median", x = "Actual Median", y = "Predicted Median")
+
 ```
 
 ![스크린샷 2025-01-11 06-07-42](https://github.com/user-attachments/assets/438f26d0-a72e-47fa-93e8-ac8ee16b01c5)
