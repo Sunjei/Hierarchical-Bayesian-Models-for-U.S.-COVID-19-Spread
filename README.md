@@ -18,7 +18,7 @@ library(ggplot2)
 
 ggplot(data_table, aes(x = median, y = predicted_median)) +
   geom_point(aes(color = state_abb)) +
-  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "red") +  # y = x 선 추가
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "red") +  
   labs(title = "Actual vs Predicted Median",
        x = "Actual Median",
        y = "Predicted Median") +
