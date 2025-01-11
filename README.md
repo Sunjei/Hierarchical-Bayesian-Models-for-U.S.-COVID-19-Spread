@@ -32,15 +32,29 @@ ggplot(data_table, aes(x = median, y = predicted_median)) +
 ![스크린샷 2025-01-11 06-07-42](https://github.com/user-attachments/assets/438f26d0-a72e-47fa-93e8-ac8ee16b01c5)
 
 ```
-random_effects <- ranef(model)$state_abb
-random_effects_df <- data.frame(state_abb = rownames(random_effects), random_effect = random_effects[, 1])
+data_table$residuals <- data_table$median - data_table$predicted_median
 
-ggplot(random_effects_df, aes(x = state_abb, y = random_effect)) +
-  geom_bar(stat = "identity") +
-  labs(title = "Random Effects by State", x = "State", y = "Random Effect")
+ggplot(data_table, aes(x = predicted_median, y = residuals)) +
+  geom_point(aes(color = state_abb)) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "red") +  
+  labs(title = "Residuals vs Predicted Median",
+       x = "Predicted Median",
+       y = "Residuals") +
+  theme_minimal()
+
 ```
 
 ![스크린샷 2025-01-11 06-07-51](https://github.com/user-attachments/assets/05d0a1c1-3c75-4c2f-bacb-520043c34994)
+
+```
+ggplot(data_table, aes(x = state_abb, y = predicted_median, fill = state_abb)) +
+  geom_boxplot() +
+  labs(title = "Predicted Median by State",
+       x = "State",
+       y = "Predicted Median") +
+  theme_minimal()
+
+```
 
 ![스크린샷 2025-01-11 06-07-57](https://github.com/user-attachments/assets/9bba9409-4ac9-4d09-a8fb-fcd3a2ede352)
 
