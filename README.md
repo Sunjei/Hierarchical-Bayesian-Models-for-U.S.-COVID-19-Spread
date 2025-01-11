@@ -73,9 +73,30 @@ ggplot(data.frame(state_abb = rownames(random_effects), random_effect = random_e
 
 ![스크린샷 2025-01-11 06-08-10](https://github.com/user-attachments/assets/5c44dfa1-99aa-4b22-aa0d-401951c16438)
 
+```
+ggplot(data_table, aes(x = predicted_median)) +
+  geom_histogram(bins = 30, fill = "skyblue", color = "black", alpha = 0.7) +
+  labs(title = "Distribution of Predicted Median",
+       x = "Predicted Median",
+       y = "Frequency") +
+  theme_minimal()
+```
+
+
 ![스크린샷 2025-01-11 06-08-29](https://github.com/user-attachments/assets/5fee88c5-cec3-4674-be62-2297bcf0f512)
 
+```
+ggplot(data_table, aes(x = predicted_median)) +
+  geom_density(fill = "skyblue", alpha = 0.7) +
+  labs(title = "Kernel Density of Predicted Median",
+       x = "Predicted Median",
+       y = "Density") +
+  theme_minimal()
+```
+
 ![스크린샷 2025-01-11 06-08-02](https://github.com/user-attachments/assets/45f9c9db-5dbd-4c7d-8bdf-befa22a2b6ec)
+
+
 
 ![스크린샷 2025-01-11 06-08-14](https://github.com/user-attachments/assets/2602bbf6-c213-44ce-a4b7-bdcd12860da8)
 
