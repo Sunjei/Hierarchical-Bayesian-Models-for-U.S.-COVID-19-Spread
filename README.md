@@ -109,13 +109,6 @@ ggplot(data_table, aes(x = predicted_median)) +
 random_effects <- ranef(model_updated)$state_abb
 
 ggplot(data.frame(random_effect = random_effects[, 1]), aes(x = random_effect)) +
-  geom_histogram(bins = 30, fill = "gold", color = "black", alpha = 0.7) +
-  labs(title = "Distribution of Random Effects by State",
-       x = "Random Effect",
-       y = "Frequency") +
-  theme_minimal()
-
-ggplot(data.frame(random_effect = random_effects[, 1]), aes(x = random_effect)) +
   geom_density(fill = "gold", alpha = 0.7) +
   labs(title = "Kernel Density of Random Effects by State",
        x = "Random Effect",
