@@ -1,6 +1,6 @@
 # Hierarchical-Bayesian-Models-for-U.S.-COVID-19-Spread
 
-
+Model Fitting
 
 ```
 data_new <- data_table
@@ -31,6 +31,8 @@ ggplot(data_table, aes(x = median, y = predicted_median)) +
 
 ![스크린샷 2025-01-11 06-07-42](https://github.com/user-attachments/assets/438f26d0-a72e-47fa-93e8-ac8ee16b01c5)
 
+Predictions
+
 ```
 data_table$residuals <- data_table$median - data_table$predicted_median
 
@@ -46,6 +48,8 @@ ggplot(data_table, aes(x = predicted_median, y = residuals)) +
 
 ![스크린샷 2025-01-11 06-07-51](https://github.com/user-attachments/assets/05d0a1c1-3c75-4c2f-bacb-520043c34994)
 
+Data Visualization
+
 ```
 ggplot(data_table, aes(x = state_abb, y = predicted_median, fill = state_abb)) +
   geom_boxplot() +
@@ -57,6 +61,8 @@ ggplot(data_table, aes(x = state_abb, y = predicted_median, fill = state_abb)) +
 ```
 
 ![스크린샷 2025-01-11 06-07-57](https://github.com/user-attachments/assets/9bba9409-4ac9-4d09-a8fb-fcd3a2ede352)
+
+
 ```
 
 random_effects <- ranef(model_updated)$state_abb
