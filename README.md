@@ -3,10 +3,32 @@
 
 
 ```
-cat("Adjusted R-squared: ", summary(gam_model)$r.sq, "\n")
+install.packages("ggplot2")  
+library(ggplot2)
+set.seed(123)  
+data <- data.frame(
+  response = rnorm(100),  
+  state_abb = rep(c("CA", "TX", "NY", "FL", "OH"), 20)  
+)
+
+model <- lmer(response ~ 1 + (1 | state_abb), data = data)
+summary(model)
+data$predicted <- predict(model)
+ggplot(data, aes(x = state_abb, y = predicted)) +
+  geom_boxplot() +
+  labs(title = "Predicted Values by State", x = "State", y = "Predicted Response")
 ```
 
 ![스크린샷 2025-01-11 06-07-42](https://github.com/user-attachments/assets/438f26d0-a72e-47fa-93e8-ac8ee16b01c5)
+
+```
+random_effects <- ranef(model)$state_abb
+random_effects_df <- data.frame(state_abb = rownames(random_effects), random_effect = random_effects[, 1])
+
+ggplot(random_effects_df, aes(x = state_abb, y = random_effect)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Random Effects by State", x = "State", y = "Random Effect")
+```
 
 ![스크린샷 2025-01-11 06-07-51](https://github.com/user-attachments/assets/05d0a1c1-3c75-4c2f-bacb-520043c34994)
 
