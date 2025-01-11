@@ -3,25 +3,29 @@
 
 
 ```
-install.packages("ggplot2")  
-library(lme4)
+data_new <- data_table
 
-model <- lmer(median ~ lower + upper + (1 | state_abb), data = data,
-              control = lmerControl(optCtrl = list(maxfun = 10000)))
+model_updated <- lmer(median ~ lower + upper + (1 | state_abb), data = data_new,
+                      control = lmerControl(optCtrl = list(maxfun = 10000)))
 
-predictions <- predict(model, newdata = data, re.form = NULL)  # 새 데이터에 대한 예측
+summary(model_updated)
 
-data$predicted_median <- predictions
+predictions <- predict(model_updated, newdata = data_table, re.form = ~0)
 
-head(data)
+data_table$predicted_median <- predictions
 
 library(ggplot2)
 
-ggplot(data, aes(x = median, y = predicted_median)) +
-  geom_point(color = "blue") + 
-  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "red") +
-  theme_minimal() +
-  labs(title = "Predicted vs Actual Median", x = "Actual Median", y = "Predicted Median")
+ggplot(data_table, aes(x = median, y = predicted_median)) +
+  geom_point(aes(color = state_abb)) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "red") +  # y = x 선 추가
+  labs(title = "Actual vs Predicted Median",
+       x = "Actual Median",
+       y = "Predicted Median") +
+  theme_minimal()
+
+
+
 
 ```
 
