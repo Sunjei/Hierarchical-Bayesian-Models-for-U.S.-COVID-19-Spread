@@ -88,7 +88,14 @@ ggplot(data.frame(random_effect = random_effects[, 1]), aes(x = random_effect)) 
 ![스크린샷 2025-01-11 06-08-29](https://github.com/user-attachments/assets/5fee88c5-cec3-4674-be62-2297bcf0f512)
 
 ```
+random_effects <- ranef(model_updated)$state_abb
 
+ggplot(data.frame(random_effect = random_effects[, 1]), aes(x = random_effect)) +
+  geom_density(fill = "gold", alpha = 0.7) +
+  labs(title = "Kernel Density of Random Effects by State",
+       x = "Random Effect",
+       y = "Density") +
+  theme_minimal()
 
 ```
 
@@ -106,14 +113,7 @@ ggplot(data_table, aes(x = predicted_median)) +
 ![스크린샷 2025-01-11 06-08-14](https://github.com/user-attachments/assets/2602bbf6-c213-44ce-a4b7-bdcd12860da8)
 
 ```
-random_effects <- ranef(model_updated)$state_abb
 
-ggplot(data.frame(random_effect = random_effects[, 1]), aes(x = random_effect)) +
-  geom_density(fill = "gold", alpha = 0.7) +
-  labs(title = "Kernel Density of Random Effects by State",
-       x = "Random Effect",
-       y = "Density") +
-  theme_minimal()
 
 ```
 
