@@ -57,6 +57,19 @@ ggplot(data_table, aes(x = state_abb, y = predicted_median, fill = state_abb)) +
 ```
 
 ![스크린샷 2025-01-11 06-07-57](https://github.com/user-attachments/assets/9bba9409-4ac9-4d09-a8fb-fcd3a2ede352)
+```
+
+random_effects <- ranef(model_updated)$state_abb
+
+ggplot(data.frame(state_abb = rownames(random_effects), random_effect = random_effects[, 1]),
+       aes(x = state_abb, y = random_effect)) +
+  geom_point(aes(color = state_abb)) +
+  labs(title = "Random Effects by State",
+       x = "State",
+       y = "Random Effect") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  
+```
 
 ![스크린샷 2025-01-11 06-08-10](https://github.com/user-attachments/assets/5c44dfa1-99aa-4b22-aa0d-401951c16438)
 
